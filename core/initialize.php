@@ -9,7 +9,7 @@ class Initialize {
     private $_query, $_error = false, $_results = null, $_count = 0;
 
     public function __construct() {
-        self::$_con_db = new mysqli("localhost", "root", "webcoded1", "talents_assessment");
+        self::$_con_db = new mysqli("d1kb8x1fu8rhcnej.cbetxkdyhwsb.us-east-1.rds.amazonaws.com", "nol3f0p78mfdk3no", "jy0jjlfk64bqk4je", "xtcaaojazvr232oq");
         if (mysqli_connect_errno(self::$_con_db)) {
             echo mysqli_connect_error();
         }
