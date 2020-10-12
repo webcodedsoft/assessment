@@ -11,4 +11,9 @@ RewriteCond %{REQUEST_FILENAME} !-l
 
 
 #Books
-RewriteRule ^books index.php [L]
+RewriteRule ^api/books books-list.php [L]
+RewriteRule ^api/book-characters/(.*) book-characters.php?Id=$1 [QSA,L]
+RewriteRule ^api/characters character-list.php [L]
+#RewriteRule ^api/characters/(.*) book-characters.php?gender=$1 [QSA,L]
+RewriteRule ^api/create-comment book-comments.php [L]
+RewriteRule ^api/get-comment/(.*) book-comments.php?bookId=$1 [QSA,L]
